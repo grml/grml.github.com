@@ -1,12 +1,262 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Open Source at Grml.org</title>
+<title>How to contribute to Grml.org</title>
+<link rel="stylesheet" href="css/bootstrap.min.css" />
 </head>
 
 <body>
-<h1>Open Source at Grml.org</h1>
 
-<p><a href="http://github.com/grml/">github.com/grml</a></p>
+<div class="topbar">
+  <div class="fill">
+    <div class="container">
+      <a class="brand" href="#">How to contribute to Grml</a>
+
+      <ul class="nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#identify">Identify</a></li>
+        <li><a href="#fork">Fork!</a></li>
+        <li><a href="#patch">Create a patch</a></li>
+        <li><a href="#upstream">Get your work upstream</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <p class="pull-right"><img src="img/logo.png" alt="*" /></p>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="content">
+    <div class="page-header">
+      <h1>How to contribute to Grml</h1>
+    </div>
+
+    <div class="row">
+      <div class="span10">
+
+	<h2>We want you!</h2>
+
+	<p><a href="http://grml.org/">Grml</a> is an active <em>open source
+	  project</em>, available since 2003 and serving <em>tens of thousands
+	  of users</em>.</p>
+
+        <p><strong>We need your help!</strong> Driven by a <a
+        href="http://grml.org/team/">small team</a> in their free time we can't
+        get as much stuff done as we'd like to. If Grml saved your ass and want
+        to give something back to the Grml project this website will get you
+        started.</p>
+
+
+        <h2>How to contribute to Grml.org</h2>
+
+	<p>Grml joined the Github party, all our repositories are available at
+	<a href="http://github.com/grml/">github.com/grml</a>. If you already
+	have a Github account it's rocking simple to contribute.
+
+	<p><span class="label notice">Notice</span>: while it brings benefit to
+	both sides of the party there really is no need to have an Github
+        account. We even run a copy of all the Github stuff on our <a
+        href="http://git.grml.org/">own infrastructure</a>. But social coding
+        rocks!</p>
+
+        <p>So, how to get started?</p>
+
+        <ul>
+
+	 <li>You already have a patch? Go straight towards <a href="#upstream">get your work upstream</a></li>
+
+         <li>You already have a repository and Want to create a patch out of it?
+         Checkout <a href="#patch">how to create a patch</a></li>
+
+	 <li>Already know which repository to work with? Skip over to <a href="#fork">Fork!</a></li>
+
+         <li>Not sure where to find the according sources? Just <a
+         href="#identify">read on...</a></li>
+
+        </ul>
+
+
+	<a name="identify"></a><br /><br /><br />
+	<h2>Identifying the appropriate Git repository</h2>
+
+	<p><a href="https://github.com/grml">Soooo many Git repositories</a>,
+	you might ask where to start? We are here to serve you!</p>
+
+	<p>Grml's project homepage is available as <a
+	  href="https://github.com/grml/grml.org">git repository</a>. If you
+	found a typo, feel the desparate need to fix our <a
+	  href="http://en.wikipedia.org/wiki/Denglisch">denglish</a> or work on
+	our documentation that's the right place to start.</p>
+
+	<p>If you are also a huge fan of Zsh, Vim, Screen and Tmux and want to
+	pimp their configs the <a
+	  href="git://github.com/grml/grml-etc-core.git">grml-etc-core</a>
+	repository is where the music plays.</p>
+
+	<p>You're already enjoying your own Live system based on Grml?
+	Fantastic! Don't forget to check out <a
+	  href="http://github.com/grml/grml-live">grml-live</a>.</p>
+
+	<p>Now let's visit the machine room. The boot process of Grml starts
+	with the Linux kernel, which includes patches and configuration found in
+	<a href="https://github.com/grml/grml-kernel">the grml-kernel
+	  repository</a>.  The initramfs takes over, driven by <a
+	  href="https://github.com/grml/live-boot-grml">live-boot-grml</a>.
+	Once the initramfs stage was finished the main bootup process featured
+	by <a href="https://github.com/grml/grml-autoconfig">grml-autoconfig</a>
+	takes over. live-boot-grml and grml-autoconfig are also the place where
+	all the nifty Grml <a href="http://grml.org/cheatcodes/">boot
+	  options</a> are implemented at.</p>
+
+	<p>A simple frontend to set up booting via network (PXE) is known as <a
+	  href="https://github.com/grml/grml-terminalserver">grml-terminalserver</a>.</p>
+
+	<p>To get your Live system onto a USB pen <a
+          href="https://github.com/grml/grml2usb">grml2usb</a> is waiting for
+        you.</p>
+
+	<p><span class="label notice">Notice</span>: none of the described
+        repositories matches your needs? Either figure out <a
+          href="https://github.com/grml">the repository</a> and try to spot the
+        appropriate repository or just <a href="#contact">talk to us</a>.</p>
+
+
+	<a name="fork"></a><br /><br /><br />
+	<h2>Fork!</h2>
+
+	<p>You <a href="#identify">identified the according Git repository</a>?
+	Great! The easiest way to play with the repository is by choosing the
+	'Fork' feature at the right side of the upper screen:</p>
+
+        <ul class="media-grid">
+          <li>
+            <a href="https://github.com/grml/grml-etc-core">
+	      <img class="thumbnail" src="img/fork.png" alt="Screenshot of Fork button at Github" />
+            </a>
+          </li>
+        </ul>
+
+	<p>This should give you your own copy of the Git repository and you can
+	commit to it without even asking us for permission. Then you can simply
+	<a href="#patch">create a patch</a>.
+
+	<p>If you don't have a Github account (yet?) then you can grab the Git
+	repository anyway. On the Github web page you can click on the 'Git
+	Read-Only' option. Then check out the URL (being
+	'git://github.com/grml/grml-etc-core.git' in the following
+	screenshot):</p>
+
+        <ul class="media-grid">
+          <li>
+            <a href="https://github.com/grml/grml-etc-core">
+	      <img class="thumbnail" src="img/clone.png" alt="Screenshot of Github repository cloning" />
+            </a>
+          </li>
+        </ul>
+
+	<p>Check out the repository and explore it:</p>
+
+<pre>
+% git clone git://github.com/grml/grml-etc-core.git
+% cd grml-etc-core</pre>
+
+
+	<a name="patch"></a><br /><br /><br />
+	<h2>Create a patch</h2>
+
+        <p>Creating a patch is simple. Check out a new branch in your repository
+        (to avoid messing and conflicts possibly showing up in master):</p>
+
+	<pre>
+% git checkout -b mygreatfeature</pre>
+
+        <p>Implement your bugfix/feature and if you're happy about it commit
+        your work:</p>
+
+% [hack hack hack]
+% git add $FILES
+% git commit -v</pre>
+
+        <p>That's it pretty much. If you aren't familiar with Git yet and want
+        to learn more <a href="http://git-scm.com/">git-scm.com</a> has plenty
+        of useful information.</p>
+
+        <p>Finally it would be great to share your work with us!</p>
+
+
+	<a name="upstream"></a><br /><br /><br />
+	<h2>Get your work upstream</h2>
+
+        <p>Getting your work into Grml isn't just about making Grml even hotter.
+        It also has advantages for you! You get your features tested and
+        maintained by a community, gain credits and get immediate builds of it
+        served by our <a href="http://jenkins.grml.org/">awesome continuous
+          integration lab</a>. Alright!</p>
+
+        <p>If you chose to <a href="#fork">forked</a> the repository all you've
+        to do is click on the 'Pull Request' button on your Github page:</p>
+
+        <div class="span4">
+          <ul class="media-grid">
+            <li>
+              <a href="http://grml.org/screenshots/">
+                <img src="img/pull-request.png" alt="Screenshot of Github's pull-request button" />
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <p>If you're interested in further documentation regarding the pull
+        request <a href="http://help.github.com/send-pull-requests/">head over
+        to the Github page about pull requests</a>.
+
+        <p>Don't have a Github account and/or prefer mail? No worries.
+        Just create a patch based on your work:</p>
+
+<pre>
+% git format-patch origin/master</pre>
+
+        <p>Then send the created patch file(s) to bugs (at) grml.org. Either use
+        your common mail client or if you prefer to use Git itself invoke:</p>
+
+<pre>
+% git send-email 000*</pre>
+
+
+        <a name="contact"></a><br /><br /><br />
+        <h2>Contact</h2>
+
+        <span class="label important">Important</span> If you're unsure about
+        something (like which repository is the right one, is the bug in
+        question fixed already, what's the best way to get started with your
+        awesome new feature or think this page is incomplete): please talk to
+        us! We're usually available on IRC in #grml on freenode (most of us
+        sitting in the CET timezone). If you prefer asynchronous communication
+        instead <a
+          href="http://ml.grml.org/mailman/listinfo/grml-devel">subscribe to the
+          grml-devel mailinglist</a> and flood our mailboxes!</p>
+
+      </div>
+
+      <div class="span4">
+        <ul class="media-grid">
+          <li>
+            <a href="http://grml.org/screenshots/">
+              <img class="thumbnail" src="img/grml_2011.12.jpg" alt="">
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; Grml Project 2012 - <a
+      href="https://github.com/grml/grml.github.com">Fork this project at github</a></p>
+  </footer>
+</div>
 
 </body>
 </html>
