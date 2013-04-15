@@ -5,22 +5,30 @@
 <link rel="stylesheet" href="css/bootstrap.min.css" />
 <style>
   body {
-    padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+    padding-top: 40px; /* 40px to make the container go all the way to the bottom of the topbar */
   }
   .page-header h2 {
-    padding-top: 60px;
-    margin-top: -60px;
+    padding-top: 40px;
+    margin-top: -40px;
+  }
+  footer{
+    border-top: 1px solid #eee;
   }
 </style>
 </head>
 
 <body>
 
-<div class="topbar">
-  <div class="fill">
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
     <div class="container">
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
       <a class="brand" href="#">How to contribute to Grml</a>
-
+      <div class="nav-collapse collapse">
       <ul class="nav">
         <li><a href="#">Home</a></li>
         <li><a href="#identify">Identify</a></li>
@@ -29,8 +37,8 @@
         <li><a href="#upstream">Get your work upstream</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-
-      <p class="pull-right"><img src="img/logo.png" alt="*" /></p>
+      </div><!--/.nav-collapse -->
+      <a class="pull-right" href="http://grml.org"><img src="img/logo.png" alt="*" /></a>
     </div>
   </div>
 </div>
@@ -42,7 +50,7 @@
     </div>
 
     <div class="row">
-      <div class="span10">
+      <div class="span8">
 
         <div class="page-header">
         <h2>We want you!</h2>
@@ -59,7 +67,7 @@
         your ass and want to give something back to the Grml project, this
         website will get you started.</p>
 
-        <span class="label important">Important</span> Don't be afraid of us.
+        <span class="label label-important">Important</span> Don't be afraid of us.
         You might think that you're not experienced enough to contribute to
         Grml (or any other open source project). But let us tell you otherwise:
         By using Grml and arriving at this page, you are highly likely to have
@@ -79,7 +87,7 @@
         <a href="http://github.com/grml/">github.com/grml</a>. If you already
         have a Github account it's really simple to contribute.
 
-        <p><span class="label notice">Notice</span>: while it makes it easier
+        <p><span class="label label-info">Notice</span>: while it makes it easier
         for both sides, there really is no need to have a Github account. We
         even run a copy of all the Github stuff on our <a
         href="http://git.grml.org/">own infrastructure</a>. But social coding
@@ -146,7 +154,7 @@
           href="https://github.com/grml/grml2usb">grml2usb</a> is waiting for
         you.</p>
 
-        <p><span class="label notice">Notice</span>: none of the described
+        <p><span class="label label-info">Notice</span>: none of the described
         repositories match your needs? Either go through <a
           href="https://github.com/grml">the repository list</a> and try to spot the
         appropriate repository or just <a href="#contact">talk to us</a>.</p>
@@ -162,7 +170,7 @@
         Great! The easiest way to play with the repository is by choosing the
         'Fork' feature at the right side of the upper screen:</p>
 
-        <ul class="media-grid">
+        <ul class="thumbnails">
           <li>
             <a href="https://github.com/grml/grml-etc-core">
               <img class="thumbnail" src="img/fork.png" alt="Screenshot of Fork button at Github" />
@@ -179,7 +187,7 @@
         Read-Only'. Then clone the URL (being
         'git://github.com/grml/grml-etc-core.git' in the following screenshot):</p>
 
-        <ul class="media-grid">
+        <ul class="thumbnails">
           <li>
             <a href="https://github.com/grml/grml-etc-core">
               <img class="thumbnail" src="img/clone.png" alt="Screenshot of Github repository cloning" />
@@ -237,7 +245,7 @@
         got to do is click on the 'Pull Request' button on your Github page:</p>
 
         <div class="span4">
-          <ul class="media-grid">
+          <ul class="thumbnails">
             <li>
               <a href="http://grml.org/screenshots/">
                 <img src="img/pull-request.png" alt="Screenshot of Github's pull-request button" />
@@ -269,7 +277,7 @@
         <h2>Contact</h2>
         </div>
 
-        <span class="label important">Important</span> If you're unsure about
+        <span class="label label-important">Important</span> If you're unsure about
         something (like which repository is the right one, if a particular bug
         is fixed already, what the best way to get started with your
         awesome new feature is, or think this page is incomplete): Just talk to
@@ -284,7 +292,7 @@
       </div>
 
       <div class="span4">
-        <ul class="media-grid">
+        <ul class="thumbnails">
           <li>
             <a href="http://grml.org/screenshots/">
               <img class="thumbnail" src="img/grml_2011.12.jpg" alt="">
