@@ -1,12 +1,12 @@
 Contributing
 ============
 
-Want to contribute to [Grml](http://grml.org/)? Great! Just head over to [grml.github.com](http://grml.github.com/)
+Want to contribute to [Grml](https://grml.org/)? Great! Please head over to [grml.github.com](https//grml.github.com/)
 
 About
 -----
 
-This is the Git repository which drives [grml.github.com](http://grml.github.com/)
+This is the Git repository which drives [grml.github.com](https://grml.github.com/)
 
 Author
 ------
