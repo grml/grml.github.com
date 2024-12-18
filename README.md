@@ -1,7 +1,7 @@
 Contributing
 ============
 
-Want to contribute to [Grml](https://grml.org/)? Great! Please head over to [grml.github.io](https//grml.github.io/)
+Want to contribute to [Grml](https://grml.org/)? Great! Please head over to [grml.github.io](https://grml.github.io/)
 
 About
 -----
